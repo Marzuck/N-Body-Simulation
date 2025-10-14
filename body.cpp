@@ -26,7 +26,7 @@ void Body::resetAcceleration() {
 
 std::string Body::toString() const {
     std::ostringstream ss;
-    ss << std::fixed << std::setprecision(6);
+    ss << std::scientific << std::setprecision(6);
     ss << "Mass: " << mass_
        << " | Pos: (" << position_[0] << ", " << position_[1] << ", " << position_[2] << ")"
        << " | Vel: (" << velocity_[0] << ", " << velocity_[1] << ", " << velocity_[2] << ")"

@@ -4,7 +4,7 @@
 int main() {
     // Example 1: Use real gravitational constant
     std::cout << "Simulation using real G (6.67430e-11)\n";
-    Simulator sim1(60.0 * 60 * 6);  // dt = 6 hours, regular G
+    Simulator sim1(60.0 * 60. );  // dt = 1 hour, regular G
 
     // Sun and Earth
     Body sun(1.989e30, {0.0, 0.0, 0.0}, {0.0, 0.0, 0.0});
@@ -13,7 +13,7 @@ int main() {
     sim1.addBody(sun);
     sim1.addBody(earth);
 
-    for (int step = 0; step < 10000; ++step) {
+    for (int step = 1; step < 10000; ++step) {
         sim1.update();
         if (step % 1000 == 0) {
             std::cout << "Step " << step << ":\n";
@@ -32,7 +32,7 @@ int main() {
     sim2.addBody(bodyA);
     sim2.addBody(bodyB);
 
-    for (int step = 0; step < 1000; ++step) {
+    for (int step = 1; step < 1000; ++step) {
         sim2.update();
         if (step % 100 == 0) {
             std::cout << "Step " << step << ":\n";

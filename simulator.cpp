@@ -65,8 +65,8 @@ void Simulator::update() {
 }
 
 void Simulator::printState() const {
-    for (const auto& body : bodies_) {
-        std::cout << body.toString() << "\n";
+    for (size_t i = 0; i < bodies_.size(); ++i) {
+        std::cout << "Body " << i + 1 << " | " << bodies_[i].toString() << "\n";
     }
     std::cout << "--------------------------------\n";
 }

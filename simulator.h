@@ -5,8 +5,8 @@
 class Simulator {
 private:
     std::vector<Body> bodies_;
-    double G_;
     double dt_;
+    double G_;
 
 public:
     Simulator(double dt, double G);
